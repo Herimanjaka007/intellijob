@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Env
+.env
+.env.local
+
+# Docker (volumes locaux si jamais bind-mount, sinon inutile avec volumes nommés)
+pgdata/
+miniodata/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
