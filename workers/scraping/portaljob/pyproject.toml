@@ -1,0 +1,29 @@
+[project]
+name = "portaljob"
+version = "0.1.0"
+description = "The scrapper for portaljob"
+readme = "README.md"
+authors = [
+    { name = "Herimanjaka Razakasoa", email = "geit.herimanjaka@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "boto3>=1.43.89",
+    "httpx>=0.28.1",
+    "psycopg[binary]>=3.3.5",
+    "pydantic-settings>=2.15.0",
+]
+
+[project.scripts]
+portaljob = "portaljob:main"
+
+[build-system]
+requires = ["uv_build>=0.12.10,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-mock>=3.15.1",
+    "ruff>=0.16.6",
+]
