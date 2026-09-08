@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS raw_documents (
 -- Accélère les recherches par source (ex: "toutes les collectes PortalJob")
 CREATE INDEX IF NOT EXISTS idx_raw_documents_source ON raw_documents (source);
 
--- Accélère les recherches par URL (ex: "historique des collectes d'une offre donnée")  
+-- Accélère les recherches par URL (ex: "historique des collectes d'une offre donnée")
 CREATE INDEX IF NOT EXISTS idx_raw_documents_url ON raw_documents (url);
 
 -- Accélère la détection de contenu déjà stocké (évite de re-uploader dans MinIO)
