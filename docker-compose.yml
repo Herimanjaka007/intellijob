@@ -8,7 +8,9 @@ services:
       POSTGRES_PASSWORD: intellijob_password
       POSTGRES_DB: intellijob
     ports:
-      - "5432:5432"
+      # 5433 : port hôte alternatif pour éviter le conflit avec un PostgreSQL
+      # natif installé sur la machine hôte (souvent en écoute sur 5432).
+      - "5433:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
       - ./infrastructure/postgres/migrations:/docker-entrypoint-initdb.d
